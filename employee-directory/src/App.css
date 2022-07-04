@@ -1,0 +1,359 @@
+/***********************
+/*GENERAL
+/***********************/
+
+body{
+    background-color: #eaeaeb;
+}
+
+.employee-list-container, .filter-nav, header{
+    text-align: center;
+}
+
+#name {
+    color: rgba(42, 49, 50, .9);
+}
+
+.App {
+  text-align: center;
+}
+
+.wrap {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/***********************
+/*HEADER
+/***********************/
+header{
+    background: rgba(6, 56, 82, 1);
+    display: flex;
+}
+
+.header-container{   
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-text{
+    padding: 1rem;
+}
+
+#header-text, #header-icon{
+    vertical-align: middle;
+    display:inline-block;
+}
+
+/***********************
+/*SEARCHBAR
+/***********************/
+.filter-box-container{   
+    color: #fff;
+    max-width: 1250px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    display: flex;
+    
+}
+
+.filter-nav{
+    background: rgba(6, 56, 82, .3);
+}
+
+#filter{
+    height: 2rem;
+    min-width: 250px;
+    font-size: 1em;
+    width: 360px;
+    margin: auto;
+}
+
+
+/***********************
+/*EMPLOYEE LIST
+/***********************/
+.employee-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+  
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 100%;
+    max-width: 360px;
+    margin: 10px 10px 20px;
+    padding: 10px;
+    background: rgba(245, 245, 245, 0.9);
+    border-radius: 0.25em;
+    border: 1px solid rgba(50, 50, 50, 0.3);
+    transition: .4s ease-out;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 95px;
+    margin: 10px 15px auto 10px;
+    border-radius: 50%;
+}
+
+.card-info-container {
+    text-align: left;
+}
+
+.card-name {
+    margin: 20px auto 0;
+}
+
+.card-text {
+    font-size: 0.9em;
+    color: rgba(50, 50, 50, 0.7);
+    margin: 7px auto;
+    transition: .4s ease-out;
+}
+
+.cap {
+    text-transform: capitalize;
+}
+
+/***********************
+/*EMPLOYEE DETAIL MODAL
+/***********************/
+.modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+    position: relative;
+    width: 95%;
+    max-width: 420px;
+    min-height: 415px;
+    margin: 10px auto auto;
+    padding-bottom: 15px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    transition: .4s ease-out;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.25em;
+    border: 1px solid rgba(50, 50, 50, 0.3);
+    transition: .3s ease-out
+}
+
+.modal-img {
+    width: 150px;
+    margin-top: 35px;
+    border-radius: 50%;
+}
+
+.modal-name {
+    margin-bottom: 5px;
+}
+
+.modal-text {
+    color: rgba(50, 50, 50, 0.7);
+    margin: 10px;
+}
+
+.modal hr {
+    width: 75%;
+    margin: 25px auto 30px;
+    border-color: rgba(200, 200, 200, 0.2);
+}
+
+.modal-btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 95%;
+    max-width: 420px;
+    padding: 10px 15px 15px;;
+    margin: 30px auto auto;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+.modal-btn-container .btn {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.75em 1.5em;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.35em;
+    transition: .4s ease-out;
+  }
+
+.modal {
+    margin-top: 100px;
+}
+
+
+
+/***********************
+/*PAGINATION BUTTONS
+/***********************/
+.pagination-btn-container {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination-btn-container a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    background: rgba(245, 245, 245, 0.9);
+    border-radius: 0.25em;
+    border: 1px solid rgba(50, 50, 50, 0.3);
+    cursor: pointer;
+    transition: .4s ease-out;
+  }
+  
+  .pagination-btn-container a:hover {
+    color: rgba(42, 49, 50, 1);
+    background-color: rgba(245, 245, 245, 0.9);
+  }
+  
+  li.pagination-active a {
+    color: white !important;
+    background-color: rgba(6, 56, 82, .9) !important;
+  }
+  
+  .pagination-disabled .previous-btn {
+    color: rgba(42, 49, 50, .5);
+    background-color: rgba(245, 245, 245, 0.5);
+  }
+
+  /* .pagination-disabled .previous-btn {
+    color: rgba(42, 49, 50, .5);
+    background-color: rgba(245, 245, 245, 0.5);
+    border: 1px solid rgba(50, 50, 50, 0.3);
+  } */
+
+  .pagination-disabled .next-btn {
+    color: rgba(42, 49, 50, .5);
+    background-color: rgba(245, 245, 245, 0.5);
+    border: 1px solid rgba(50, 50, 50, 0.3);
+  }
+
+  .pagination-btn-container{
+    width: 100%;
+    padding: 0;
+  }
+
+  .pagination-btn-container li:not(.previous, .next){
+    display: none;
+  }
+
+  .pagination-wrapper{
+    max-width: 1250px;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    display: block;
+    align-content: center;
+    width: 100%;
+  }
+
+  /* .pagination-btn-container{
+    margin: auto;
+  } */
+/* ===================================== 
+   Media Queries
+======================================== */
+
+/* ===================================== 
+   Tablet
+======================================== */
+
+@media (min-width: 768px) {
+    .header-inner-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .header-text-container {
+        text-align: center;
+    }
+
+    .pagination-btn-container li:not(.previous, .next){
+        display: block;
+      }
+}
+
+
+/* ===================================== 
+   Desktop
+======================================== */
+
+@media (min-width: 1024px) {
+    header{
+        display: block;
+    }
+
+    .header-logo{
+        padding-left: 20px;
+    }
+ 
+    .card:hover {
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(50, 50, 50, 0.9);
+    }
+
+    .card:hover .card-text {
+        color: rgba(25, 25, 25, 1); 
+    }
+
+    .pagination-btn-container a:hover{
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(50, 50, 50, 0.9);
+    }
+
+    .btn:hover {
+        background: rgba(255, 255, 255, 1);
+        color: rgba(25, 25, 25, 1); 
+    }
+
+    #filter{
+        margin-right: 20px;
+    }
+
+    .filter-nav{
+        text-align: right;
+    }
+
+    .filter-box-container{
+        display: block;
+    }
+}
